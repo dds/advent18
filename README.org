@@ -1,3 +1,7 @@
 * Advent of Code 2018 Solutions by David Smith
 ** DONE Day 1
-** TODO Day 2
+** DONE Day 2
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2018-12-02 Sun 15:32]
+:END:
+** TODO Day 3
