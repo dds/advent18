@@ -4,4 +4,9 @@
 :LOGBOOK:
 - State "DONE"       from "TODO"       [2018-12-02 Sun 15:32]
 :END:
-** TODO Day 3
+** DONE Day 3
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2018-12-03 Mon 11:13]
+:END:
+This time, wrote a parser and a class.  But that part was quick, done by before waking M- up for school.
+** TODO Day 4
