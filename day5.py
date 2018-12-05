@@ -44,15 +44,6 @@ def removeUnit(polymer, unit):
             index += 1
     return polymer
 
-def best(data, worst=False):
-    index = best = 0
-    best = data[index]
-    for i in range(0, len(data)):
-        if (worst and (data[i] < best)) or (not worst and data[i] > best):
-            best = data[i]
-            index = i
-    return index, best
-
 for polymer in polymers:
     reactedPolymer = reactPolymer(polymer)
     print 'A: %d' % len(reactedPolymer)
@@ -62,5 +53,5 @@ for polymer in polymers:
     for i, p in enumerate(reducedPolymers):
         reactedReducedPolymers.append(reactPolymer(p))
         print 'got %s reduced polymers' % chr(ord('a') + i)
-    index, bestReducedPolymer = best([len(i) for i in reactedReducedPolymers], True)
+    index, bestReducedPolymer = util.best([len(i) for i in reactedReducedPolymers], True)
     print 'B: %d (worst unit: %s)' % (bestReducedPolymer, chr(ord('a') + index))
