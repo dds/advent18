@@ -1,5 +1,5 @@
 import util
-from string import lowercase
+from string import ascii_lowercase as lowercase
 from collections import defaultdict
 import string
 
@@ -16,7 +16,7 @@ def distance(p1, p2):
     return abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
 
 def parseCoords(line):
-    return map(int, line.split(','))
+    return list(map(int, line.split(',')))
 
 
 centers = []
@@ -40,17 +40,6 @@ def toC(i):
     quotient, remainder = divmod(i, dimensions[1])
     return remainder, quotient
 
-def borderPoints(c):
-    return [(c[0]-1, c[1]),
-            (c[0]-1, c[1]-1),
-            (c[0], c[1]-1),
-            (c[0]+1, c[1]-1),
-            (c[0]+1, c[1]),
-            (c[0]+1, c[1]+1),
-            (c[0], c[1]+1),
-            (c[0]-1, c[1]+1)]
-
-
 areas = defaultdict(int)
 infiniteAreas = {}
 
@@ -65,15 +54,13 @@ def printBoard():
         stringBoard += c
         if (i + 1) % dimensions[1] == 0:
             stringBoard += '\n'
-    print stringBoard
+    print(stringBoard)
 
 total_region = 0
 
 for i in range(0, toI(dimensions)):
     c = toC(i)
-    distances = []
-    for j, p in enumerate(centers):
-        distances.append(distance(c, p))
+    distances = [distance(c, p) for p in centers]
     index, value = util.best(distances, worst=True)
     distance_sum = sum(distances)
     if distance_sum < 10000:
@@ -86,5 +73,5 @@ for i in range(0, toI(dimensions)):
 
 for i in infiniteAreas:
     del areas[i]
-print util.best(areas.values())[1]
-print total_region
+print(util.best(list(areas.values()))[1])
+print(total_region)
