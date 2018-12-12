@@ -35,3 +35,7 @@ This time, wrote a parser and a class.  But that part was quick, done by before 
 :END:
 ** DONE Day 10
 ** TODO Day 11
+:LOGBOOK:
+CLOCK: [2018-12-12 Wed 11:33]--[2018-12-12 Wed 11:33] =>  0:00
+:END:
+Part 1 complete. Part 2 still in progress.
