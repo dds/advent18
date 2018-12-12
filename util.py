@@ -10,10 +10,10 @@ def get_data(day):
     return open('/home/dds/src/dds/advent18/%d/input.txt' % day)
 
 def toI(dim, c):
-    return c[1] * dim[1] + c[0]
-def toC(dim, c):
-    q, r = divmod(i, dim[1])
-    return r, q
+    return c[1] * dim[0] + c[0]
+def toC(dim, i):
+    q, r = divmod(i, dim[0])
+    return (r, q)
 def parseCoords(line):
     return list(map(int, line.split(',')))
 def neighbors(c):

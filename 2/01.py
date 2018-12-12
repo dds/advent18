@@ -19,7 +19,7 @@ for i in id_list:
     index = 0
     for c in chars:
         stridelen = 0
-        while True:
+         while True:
             if index+stridelen >= charlen:
                 break
             if chars[index+stridelen] == c:

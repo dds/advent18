@@ -29,4 +29,9 @@ This time, wrote a parser and a class.  But that part was quick, done by before 
 :LOGBOOK:
 - State "DONE"       from "TODO"       [2018-12-08 Sat 10:46]
 :END:
-** TODO Day 9
+** DONE Day 9
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2018-12-12 Wed 11:30]
+:END:
+** DONE Day 10
+** TODO Day 11
